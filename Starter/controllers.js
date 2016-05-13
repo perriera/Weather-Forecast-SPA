@@ -1,10 +1,14 @@
-weatherApp.controller('homeController', ['$scope', '$log', 'cityService', function($scope, $log, cityService) {
+weatherApp.controller('homeController', ['$scope', '$log', '$location', 'cityService', function($scope, $log, $location, cityService) {
     
     $scope.city = cityService.city;
     
     $scope.$watch('city', function() {
         cityService.city = $scope.city;
     });
+    
+    $scope.submit = function () {
+        $location.path("/forecast");
+    }
     
     $log.log(cityService.city);
     $log.log(cityService.namelength());
