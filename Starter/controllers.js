@@ -13,7 +13,6 @@ weatherApp.controller('homeController', ['$scope', '$log', '$location', 'citySer
     $log.log(cityService.city);
     $log.log(cityService.namelength());
     
-    
 }]);
 
 weatherApp.controller('forecastController', ['$scope', '$log', '$routeParams', 'cityService', 'weatherService', function($scope, $log, $routeParams, cityService, weatherService) {
@@ -39,4 +38,3 @@ weatherApp.controller('forecastController', ['$scope', '$log', '$routeParams', '
     });
                                              
 }]);
-
